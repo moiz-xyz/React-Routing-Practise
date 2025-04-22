@@ -11,6 +11,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+import Footer from '../Footer/Footer';
+import Home from '../Home/Home';
 
 const tiers = [
   {
@@ -59,6 +61,8 @@ const tiers = [
 
 export default function Pricing() {
   return (
+  <div>
+<Home/>
     <Container
       id="pricing"
       sx={{
@@ -96,7 +100,7 @@ export default function Pricing() {
         container
         spacing={3}
         sx={{ alignItems: 'center', justifyContent: 'center', width: '100%' }}
-      >
+        >
         {tiers.map((tier) => (
           <Grid
             size={{ xs: 12, sm: tier.title === 'Enterprise' ? 12 : 6, md: 4 }}
@@ -119,11 +123,11 @@ export default function Pricing() {
                     ...theme.applyStyles('dark', {
                       background:
                         'radial-gradient(circle at 50% 0%, hsl(220, 20%, 20%), hsl(220, 30%, 16%))',
-                      boxShadow: `0 8px 12px hsla(0, 0%, 0%, 0.8)`,
-                    }),
+                        boxShadow: `0 8px 12px hsla(0, 0%, 0%, 0.8)`,
+                      }),
                   })),
               ]}
-            >
+              >
               <CardContent>
                 <Box
                   sx={[
@@ -153,7 +157,7 @@ export default function Pricing() {
                       alignItems: 'baseline',
                     },
                     tier.title === 'Professional'
-                      ? { color: 'grey.50' }
+                    ? { color: 'grey.50' }
                       : { color: null },
                   ]}
                 >
@@ -167,8 +171,8 @@ export default function Pricing() {
                 <Divider sx={{ my: 2, opacity: 0.8, borderColor: 'divider' }} />
                 {tier.description.map((line) => (
                   <Box
-                    key={line}
-                    sx={{ py: 1, display: 'flex', gap: 1.5, alignItems: 'center' }}
+                  key={line}
+                  sx={{ py: 1, display: 'flex', gap: 1.5, alignItems: 'center' }}
                   >
                     <CheckCircleRoundedIcon
                       sx={[
@@ -178,17 +182,17 @@ export default function Pricing() {
                         tier.title === 'Professional'
                           ? { color: 'primary.light' }
                           : { color: 'primary.main' },
-                      ]}
-                    />
+                        ]}
+                        />
                     <Typography
                       variant="subtitle2"
                       component={'span'}
                       sx={[
                         tier.title === 'Professional'
-                          ? { color: 'grey.50' }
-                          : { color: null },
+                        ? { color: 'grey.50' }
+                        : { color: null },
                       ]}
-                    >
+                      >
                       {line}
                     </Typography>
                   </Box>
@@ -199,7 +203,7 @@ export default function Pricing() {
                   fullWidth
                   variant={tier.buttonVariant}
                   color={tier.buttonColor}
-                >
+                  >
                   {tier.buttonText}
                 </Button>
               </CardActions>
@@ -208,5 +212,7 @@ export default function Pricing() {
         ))}
       </Grid>
     </Container>
+    
+    </div>
   );
 }

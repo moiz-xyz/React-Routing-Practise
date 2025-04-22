@@ -6,6 +6,7 @@ import Testimonials from './Testimonials/Testimonials'
 import Highlights from './Highlights/Highlights'
 import FAQ from './FAQ/FAQ'
 import Footer from './Footer/Footer'
+import Pricing from './Pricing/Pricing'
 
 const Main = () => {
   return (
@@ -15,6 +16,7 @@ const Main = () => {
     <Features/>
     <Testimonials/>
     <Highlights/>
+    <Pricing/>
     <FAQ/>
     <Footer/>
 

@@ -8,6 +8,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/system';
+import Home from '../Home/Home';
+import Footer from '../Footer/Footer';
 
 const userTestimonials = [
   {
@@ -82,6 +84,8 @@ export default function Testimonials() {
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
 
   return (
+    <div>
+      <Home/>
     <Container
       id="testimonials"
       sx={{
@@ -93,13 +97,13 @@ export default function Testimonials() {
         alignItems: 'center',
         gap: { xs: 3, sm: 6 },
       }}
-    >
+      >
       <Box
         sx={{
           width: { sm: '100%', md: '60%' },
           textAlign: { sm: 'left', md: 'center' },
         }}
-      >
+        >
         <Typography
           component="h2"
           variant="h4"
@@ -141,7 +145,7 @@ export default function Testimonials() {
                   flexDirection: 'row',
                   justifyContent: 'space-between',
                 }}
-              >
+                >
                 <CardHeader
                   avatar={testimonial.avatar}
                   title={testimonial.name}
@@ -151,12 +155,14 @@ export default function Testimonials() {
                   src={logos[index]}
                   alt={`Logo ${index + 1}`}
                   style={logoStyle}
-                />
+                  />
               </Box>
             </Card>
           </Grid>
         ))}
       </Grid>
     </Container>
+    {/* <Footer/> */}
+      </div>
   );
 }

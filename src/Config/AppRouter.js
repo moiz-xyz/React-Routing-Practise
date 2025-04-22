@@ -20,7 +20,7 @@ const AppRouter = () => {
      <Route path='/Pricing' element={<Pricing />}> </Route>
      <Route path='/Faq' element={<FAQ />}> </Route>
      <Route path='/Blog' element={<Footer />}> </Route>
-     <Route path='**' element={<Notfound/>}> </Route>
+     <Route path='*' element={<Notfound/>}> </Route>
 
       </Routes>
     </div>
