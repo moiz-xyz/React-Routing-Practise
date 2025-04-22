@@ -8,6 +8,7 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Home from '../Home/Home';
 
 export default function FAQ() {
   const [expanded, setExpanded] = React.useState([]);
@@ -19,6 +20,8 @@ export default function FAQ() {
   };
 
   return (
+    <div>
+<Home/>
     <Container
       id="faq"
       sx={{
@@ -72,12 +75,12 @@ export default function FAQ() {
         <Accordion
           expanded={expanded.includes('panel2')}
           onChange={handleChange('panel2')}
-        >
+          >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2d-content"
             id="panel2d-header"
-          >
+            >
             <Typography component="span" variant="subtitle2">
               Can I return the product if it doesn&apos;t meet my expectations?
             </Typography>
@@ -87,7 +90,7 @@ export default function FAQ() {
               variant="body2"
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
-            >
+              >
               Absolutely! We offer a hassle-free return policy. If you&apos;re not
               completely satisfied, you can return the product within [number of
               days] days for a full refund or exchange.
@@ -97,7 +100,7 @@ export default function FAQ() {
         <Accordion
           expanded={expanded.includes('panel3')}
           onChange={handleChange('panel3')}
-        >
+          >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3d-content"
@@ -127,7 +130,7 @@ export default function FAQ() {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4d-content"
             id="panel4d-header"
-          >
+            >
             <Typography component="span" variant="subtitle2">
               Is there a warranty on the product, and what does it cover?
             </Typography>
@@ -147,5 +150,6 @@ export default function FAQ() {
         </Accordion>
       </Box>
     </Container>
+              </div>
   );
 }

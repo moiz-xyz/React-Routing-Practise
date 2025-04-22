@@ -11,6 +11,7 @@ import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
 import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
 import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
 import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import Home from '../Home/Home';
 
 const items = [
   {
@@ -52,7 +53,10 @@ const items = [
 ];
 
 export default function Highlights() {
+  
   return (
+    <div>
+      <Home/>
     <Box
       id="highlights"
       sx={{
@@ -61,7 +65,7 @@ export default function Highlights() {
         color: 'white',
         bgcolor: 'grey.900',
       }}
-    >
+      >
       <Container
         sx={{
           position: 'relative',
@@ -101,7 +105,7 @@ export default function Highlights() {
                   borderColor: 'hsla(220, 25%, 25%, 0.3)',
                   backgroundColor: 'grey.800',
                 }}
-              >
+                >
                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
                 <div>
                   <Typography gutterBottom sx={{ fontWeight: 'medium' }}>
@@ -117,5 +121,6 @@ export default function Highlights() {
         </Grid>
       </Container>
     </Box>
+                </div>
   );
 }

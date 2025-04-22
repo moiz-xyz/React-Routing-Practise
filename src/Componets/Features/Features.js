@@ -11,6 +11,7 @@ import { styled } from '@mui/material/styles';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import Home from '../Home/Home';
 
 const items = [
   {
@@ -144,6 +145,8 @@ export default function Features() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
+    <div>
+   <Home/>
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
       <Box sx={{ width: { sm: '100%', md: '60%' } }}>
         <Typography
@@ -169,7 +172,7 @@ export default function Features() {
           flexDirection: { xs: 'column', md: 'row-reverse' },
           gap: 2,
         }}
-      >
+        >
         <div>
           <Box
             sx={{
@@ -258,7 +261,7 @@ export default function Features() {
               })}
               style={
                 items[selectedItemIndex]
-                  ? {
+                ? {
                       '--items-imageLight': items[selectedItemIndex].imageLight,
                       '--items-imageDark': items[selectedItemIndex].imageDark,
                     }
@@ -269,5 +272,6 @@ export default function Features() {
         </Box>
       </Box>
     </Container>
+                    </div>
   );
 }
